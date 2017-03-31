@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="com.khushmeetsingh.travelsafe.SignUp"
     android:padding="16dp"
-    android:background="@color/material_blue_grey_800"
+    android:background="@mipmap/background"
     android:weightSum="1"
     android:orientation="vertical">
 

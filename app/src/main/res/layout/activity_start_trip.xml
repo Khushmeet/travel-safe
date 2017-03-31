@@ -7,7 +7,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    android:background="@color/material_blue_grey_800"
+    android:background="@mipmap/background"
     tools:context="com.khushmeetsingh.travelsafe.StartTripActivity">
 
 </RelativeLayout>
