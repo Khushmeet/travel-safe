@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.khushmeetsingh.travelsafe.MainActivity"
+    android:padding="16dp"
+    android:background="@color/material_blue_grey_800">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/button"
+        android:textSize="80px"
+        android:onClick="login"
+        android:layout_marginBottom="160dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/login_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:width="150dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TravelSafe"
+        android:id="@+id/textView2"
+        android:textSize="200px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textAlignment="textEnd"
+        android:text="An App for safety of cab travellers"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView2"
+        android:textSize="100px"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignEnd="@+id/textView2"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up?"
+        android:id="@+id/button3"
+        android:textSize="50px"
+        android:background="@null"
+        android:textColor="@android:color/white"
+        android:onClick="signUp"
+        android:layout_alignTop="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp" />
+
+</RelativeLayout>
