@@ -13,66 +13,42 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:id="@+id/editText4"
-        android:layout_marginTop="46dp"
-        android:textColor="@android:color/white"
-        android:padding="10dp"
-        android:background="@drawable/text_fields" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/editText5"
-        android:layout_below="@+id/editText4"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp"
+        android:id="@+id/phone"
+        android:layout_marginTop="28dp"
         android:hint="Phone"
         android:textColor="@android:color/white"
         android:padding="10dp"
         android:background="@drawable/text_fields"
-        android:textColorHint="@android:color/white" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/editText6"
-        android:layout_below="@+id/editText5"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp"
-        android:hint="Email"
-        android:textColor="@android:color/white"
-        android:padding="10dp"
-        android:background="@drawable/text_fields"
-        android:textColorHint="@android:color/white" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editText7"
-        android:hint="Adhar Card Number"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="30dp"
-        android:textColor="@android:color/white"
-        android:padding="10dp"
-        android:background="@drawable/text_fields"
-        android:textColorHint="@android:color/white" />
+        android:textColorHint="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <Button
+        android:id="@+id/doLogin"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        android:id="@+id/button4"
-        android:layout_below="@+id/editText7"
+        android:layout_below="@+id/phone"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="122dp"
         android:background="@drawable/login_button"
-        android:onClick="homeActivity"/>
+        android:onClick="doLogin"
+        android:text="Login" />
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/phone"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/text_fields"
+        android:ems="10"
+        android:padding="10dp"
+        android:hint="OTP"
+        android:inputType="phone"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
 </RelativeLayout>
