@@ -14,14 +14,16 @@
         android:id="@+id/signup_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="64dp"
         android:height="40dp"
         android:background="@drawable/text_fields"
         android:hint="Email"
         android:inputType="textAutoCorrect|textEmailAddress"
         android:padding="10dp"
         android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white" />
+        android:textColorHint="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/signup_pswd"
