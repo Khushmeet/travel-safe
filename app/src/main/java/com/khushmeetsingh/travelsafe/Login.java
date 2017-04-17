@@ -2,7 +2,6 @@ package com.khushmeetsingh.travelsafe;
 
 
 import android.content.Intent;
-import android.support.annotation.IntegerRes;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
