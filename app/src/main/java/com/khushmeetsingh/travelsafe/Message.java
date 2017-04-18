@@ -37,7 +37,7 @@ public class Message extends AppCompatActivity {
 
         qrView.setText("Driver Details:\n"+qr_data);
 
-        msg = new MSG91("149404AiLmf4H5nHI58f5df98", true);
+        msg = new MSG91("**msg91 api**", true);
     }
 
     public void notify(View v){
