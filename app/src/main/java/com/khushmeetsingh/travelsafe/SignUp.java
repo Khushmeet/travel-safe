@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -17,6 +18,7 @@ public class SignUp extends AppCompatActivity {
     protected EditText signup_email;
     protected EditText signup_pswd;
     private FirebaseAuth mFirebaseAuth;
+    protected ProgressBar signupBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class SignUp extends AppCompatActivity {
         mFirebaseAuth = FirebaseAuth.getInstance();
         signup_email = (EditText)findViewById(R.id.signup_email);
         signup_pswd = (EditText)findViewById(R.id.signup_pswd);
+        signupBar = (ProgressBar)findViewById(R.id.signup_bar);
 
     }
 
@@ -41,6 +44,7 @@ public class SignUp extends AppCompatActivity {
             AlertDialog dialog = builder.create();
             dialog.show();
         } else {
+            signupBar.setVisibility(View.VISIBLE);
             mFirebaseAuth.createUserWithEmailAndPassword(email, pswd)
                     .addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -57,6 +61,7 @@ public class SignUp extends AppCompatActivity {
                                         .setPositiveButton(android.R.string.ok, null);
                                 AlertDialog dialog = builder.create();
                                 dialog.show();
+                                signupBar.setVisibility(View.GONE);
                             }
                         }
                     });

@@ -27,19 +27,11 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
-
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.khushmeetsingh.travelsafe.MainActivity" />
         </activity>
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
-
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.khushmeetsingh.travelsafe.MainActivity" />
         </activity>
         <activity android:name=".HomeActivity">
             <intent-filter>
@@ -50,9 +42,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.khushmeetsingh.travelsafe.MainActivity" />
         </activity>
     </application>
 

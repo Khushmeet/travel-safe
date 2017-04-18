@@ -3,6 +3,7 @@ package com.khushmeetsingh.travelsafe;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,11 +29,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View v){
         Intent i = new Intent(this, Login.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(i);
     }
 
     public void signUp(View v){
         Intent i = new Intent(this, SignUp.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(i);
     }
 }

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -17,9 +18,10 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Login extends AppCompatActivity {
 
-    protected EditText phone;
-    protected EditText otp;
+    protected EditText email;
+    protected EditText pswd;
     private FirebaseAuth mFirebaseAuth;
+    protected ProgressBar login_bar;
 
 
     @Override
@@ -27,15 +29,16 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        phone = (EditText)findViewById(R.id.phone);
-        otp = (EditText)findViewById(R.id.otp);
+        email = (EditText)findViewById(R.id.login_email);
+        pswd = (EditText)findViewById(R.id.login_pswd);
         mFirebaseAuth = FirebaseAuth.getInstance();
+        login_bar = (ProgressBar)findViewById(R.id.login_bar);
     }
 
     public void doLogin(View v){
-        String phoneStr = phone.getText().toString();
-        String otp = phone.getText().toString();
-        if (phoneStr.isEmpty() || otp.isEmpty()) {
+        String emailStr = email.getText().toString();
+        String pswdStr = pswd.getText().toString();
+        if (emailStr.isEmpty() || pswdStr.isEmpty()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
             builder.setMessage("Please enter the details")
                     .setTitle("Missing")
@@ -44,7 +47,8 @@ public class Login extends AppCompatActivity {
             dialog.show();
         }
         else{
-            mFirebaseAuth.signInWithEmailAndPassword(phoneStr, otp)
+            login_bar.setVisibility(View.VISIBLE);
+            mFirebaseAuth.signInWithEmailAndPassword(emailStr, pswdStr)
                     .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -60,6 +64,7 @@ public class Login extends AppCompatActivity {
                                         .setPositiveButton(android.R.string.ok, null);
                                 AlertDialog dialog = builder.create();
                                 dialog.show();
+                                login_bar.setVisibility(View.GONE);
                             }
                         }
                     });
